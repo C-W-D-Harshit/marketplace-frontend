@@ -5,6 +5,7 @@ import { BiSearchAlt } from "react-icons/bi";
 import { BsCart4 } from "react-icons/bs";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { useRouter } from "next/router";
+import { AiOutlineHeart } from "react-icons/ai";
 
 const Bot_Nav = () => {
   const router = useRouter();
@@ -19,7 +20,9 @@ const Bot_Nav = () => {
         />
       </Link>
       <Link className="link" href="/">
-        <BsCart4 className={router.pathname === "/cart" ? "active" : ""} />
+        <AiOutlineHeart
+          className={router.pathname === "/cart" ? "active" : ""}
+        />
       </Link>
       <Link className="link" href="/">
         <MdOutlineAccountCircle

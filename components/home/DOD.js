@@ -1,5 +1,8 @@
+import Link from "next/link";
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import ProductCard from "../product/productCard";
+import img from "../../public/product-img.png";
 
 const DOD = ({ title, wtd }) => {
   return (
@@ -8,12 +11,61 @@ const DOD = ({ title, wtd }) => {
         <div className="dod_tit">
           <p style={{ fontFamily: "poppins" }}>{title}</p>
         </div>
-        <div className="dod_cta">
+        <Link href={`/${wtd}`} className="dod_cta">
           <p>More Products</p>
           <AiOutlineArrowRight />
-        </div>
+        </Link>
       </div>
-      <div className="dod_hold">{/* ProductCard */}</div>
+      <div className="dod_hold">
+        <ProductCard
+          name="Airpods"
+          desc="Sample description"
+          price={83}
+          ratings={5}
+          numOfReviews={208}
+          img={img}
+        />
+        <ProductCard
+          name="Airpods"
+          desc="Sample description"
+          price={83}
+          ratings={5}
+          numOfReviews={208}
+          img={img}
+        />
+        <ProductCard
+          name="Airpods"
+          desc="Sample description"
+          price={83}
+          ratings={5}
+          numOfReviews={208}
+          img={img}
+        />
+        <ProductCard
+          name="Airpods"
+          desc="Sample description"
+          price={83}
+          ratings={5}
+          numOfReviews={208}
+          img={img}
+        />
+        <ProductCard
+          name="Airpods"
+          desc="Sample description"
+          price={83}
+          ratings={5}
+          numOfReviews={208}
+          img={img}
+        />
+        <ProductCard
+          name="Airpods"
+          desc="Sample description"
+          price={83}
+          ratings={5}
+          numOfReviews={208}
+          img={img}
+        />
+      </div>
     </div>
   );
 };

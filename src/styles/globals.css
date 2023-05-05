@@ -324,8 +324,9 @@ input:focus {
   padding: 3rem 6rem;
   justify-content: center;
   /* margin: 0 2rem; */
-  background-image: url("/banner.jpg");
-  object-fit: cover;
+  /* background-image: url("/banner.jpg");
+  object-fit: cover; */
+  background-color: #f3f3f3;
 }
 
 .home__banner > :first-child {
@@ -407,6 +408,7 @@ input:focus {
 .home_sec1 {
   margin-top: 5rem;
   width: 100%;
+  /* overflow-x: hidden; */
   /* margin-bottom: 5rem; */
 }
 
@@ -424,6 +426,7 @@ input:focus {
   width: 94%;
   justify-content: space-between;
   flex-wrap: nowrap;
+  overflow: hidden;
   overflow-x: auto;
 }
 
@@ -464,7 +467,7 @@ input:focus {
   }
   .home_sec1_hold {
     margin-left: 2rem;
-    width: 95%;
+    width: 92%;
     margin-top: -2rem;
     z-index: 1;
     -webkit-overflow-scrolling: touch;
@@ -480,6 +483,7 @@ input:focus {
     font-size: 3rem;
     z-index: 1;
   }
+
   .categoryCard {
     width: 2rem !important;
     height: 25rem;
@@ -488,4 +492,177 @@ input:focus {
 
 .dod {
   margin-top: 5rem;
+  /* margin-left: 6rem; */
+}
+
+.dod_top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  /* padding: 0rem 2rem; */
+}
+
+.dod_tit {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-left: 6rem;
+  /* margin-bottom: 3rem; */
+}
+
+.dod_cta {
+  font-size: 2.5rem;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  text-decoration: underline var(--green);
+}
+
+.dod_cta > p {
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.dod_hold {
+  /* margin-left: 6rem; */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.productCard {
+  width: 100%;
+  min-width: 30rem;
+  margin: 2rem 6rem;
+  font-family: "poppins", sans-serif;
+}
+
+.productCard__top {
+  width: 100%;
+  /* background-color: var(--pro-back); */
+  position: relative;
+}
+.productCard_img {
+  width: 100%;
+  height: 30rem;
+  object-fit: contain;
+  /* background-color: inherit; */
+  background-color: var(--pro-back);
+  padding: 2rem;
+  border-radius: 25px;
+}
+
+.productCard_img > * {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  /* margin: 2rem; */
+  /* padding: 2rem; */
+}
+
+.productCard__top > :nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 2rem;
+  margin-right: -2rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  font-size: 3rem;
+  color: #7f7f7f;
+  border-radius: 50%;
+}
+
+.productCard__top > :nth-child(2):hover {
+  color: var(--lr-green);
+  cursor: pointer;
+}
+
+.productCard_info > :first-child {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "poppins";
+  margin-bottom: -1rem;
+}
+
+.productCard_info > :nth-child(2) {
+  font-size: 2rem;
+  padding-left: 1rem;
+}
+
+.productCard_info > :nth-child(3) {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.productCard_cta {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  border-radius: 25px;
+  border: 1px solid var(--green);
+  width: fit-content;
+  font-size: 2rem;
+  font-weight: 600;
+  transition: ease-in-out 0.5s;
+}
+
+.productCard_cta:hover {
+  color: #fff;
+  background-color: var(--green);
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.dod_hold::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .dod_tit {
+    font-size: 3rem;
+    margin-left: 2rem;
+
+    /* margin-top: -3rem; */
+  }
+  .dod_top {
+    align-items: center;
+  }
+
+  .dod_cta {
+    font-size: 1.8rem;
+  }
+  .dod_cta > p {
+    margin-right: 0.5rem;
+    font-weight: 600;
+  }
+  .dod_hold {
+    margin-left: -2rem;
+    width: 100%;
+    /* margin-top: -2rem; */
+    z-index: 1;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: 0;
+  }
+  .dod_hold::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .productCard {
+    margin: 2rem 4rem;
+  }
 }
