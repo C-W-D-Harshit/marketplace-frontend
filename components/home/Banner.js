@@ -9,7 +9,7 @@ const Banner = () => {
         Shopping is a bit of relaxing hobbie for me, which is sometime troubling
         for the bank balance.
       </p>
-      <Link className="home__banner__cta" href="#categories">
+      <Link className="home__banner__cta" href="#categories" scroll={false}>
         <p>Shop Now</p>
       </Link>
     </div>
