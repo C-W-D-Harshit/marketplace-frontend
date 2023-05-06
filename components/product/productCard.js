@@ -1,21 +1,35 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import ReactStars from "react-stars";
 
-const ProductCard = ({ name, desc, price, img, ratings, numOfReviews }) => {
+const ProductCard = ({
+  name,
+  desc,
+  salePrice,
+  price,
+  img,
+  ratings,
+  numOfReviews,
+  id,
+}) => {
   return (
     <div className="productCard">
       <div className="productCard__top">
-        <div className="productCard_img">
-          <Image src={img} alt={name} width={300} height={400} />
-        </div>
+        <Link href={`/product/${id}`}>
+          <div className="productCard_img">
+            <Image src={img} alt={name} width={300} height={400} />
+          </div>
+        </Link>
         <AiOutlineHeart />
       </div>
       <div className="productCard_info">
         <div>
           <p style={{ fontSize: "3rem", fontWeight: "600" }}>{name}</p>
-          <p style={{ fontSize: "2.5rem", fontWeight: "600" }}>₹{price}.00</p>
+          <p style={{ fontSize: "2.5rem", fontWeight: "600" }}>
+            ₹{salePrice}.00
+          </p>
         </div>
         <div>
           <p>{desc}</p>
