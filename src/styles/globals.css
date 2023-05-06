@@ -562,6 +562,7 @@ input:focus {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter: drop-shadow(5px 5px 5px #222);
 
   /* margin: 2rem; */
   /* padding: 2rem; */
@@ -581,6 +582,7 @@ input:focus {
   font-size: 3rem;
   color: #7f7f7f;
   border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .productCard__top > :nth-child(2):hover {
@@ -682,5 +684,115 @@ input:focus {
   }
   .productCard {
     margin: 2rem 4rem;
+  }
+}
+
+/* shop */
+.shop {
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop_fil {
+  width: 20%;
+  padding: 2rem;
+  /* border: 1px solid rgb(90, 90, 90); */
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.shop_fil > :first-child {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  width: 90%;
+  text-align: left;
+}
+
+.shop_filter {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgb(187, 187, 187);
+  width: 90%;
+}
+
+.shop_filter > :first-child {
+  margin-bottom: 1rem;
+}
+
+.shop_filter__ {
+  font-size: 2rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.shop_hold {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.electronics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.electronics_banner {
+  width: 80%;
+  background-color: #faf0e4;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 15px;
+  padding: 2rem 8rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.electronics_banner > :first-child {
+  font-family: "poppins", sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  width: 40%;
+  color: var(--green);
+  margin-bottom: 1.5rem;
+}
+
+.electronics_banner_cta {
+  padding: 1rem 3rem;
+  color: #fff;
+  background-color: var(--green);
+  border-radius: 15px;
+  width: fit-content;
+  font-weight: 600;
+  font-family: "poppins", sans-serif;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .electronics_banner {
+    width: 75%;
+    padding: 2rem 3rem;
+    height: 20rem;
+  }
+  .electronics_banner > :first-child {
+    font-size: 3rem;
+    font-weight: 700;
+    width: 100%;
+  }
+  .electronics_banner_cta {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
   }
 }

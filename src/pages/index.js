@@ -6,16 +6,6 @@ import DOD from "../../components/home/DOD";
 import baseUrl from "../../helpers/baseUrl";
 
 export default function Home({ Dproducts, Nproducts }) {
-  const DODD = () => {
-    if (Dproducts) {
-      return <DOD title="Deals of the Day!" wtd="dod" products={Dproducts} />;
-    }
-  };
-  const nA = () => {
-    if (Nproducts) {
-      return <DOD title="New Arrivals!" wtd="nA" products={Nproducts} />;
-    }
-  };
   return (
     <>
       <Head>

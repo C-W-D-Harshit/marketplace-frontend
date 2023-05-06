@@ -25,16 +25,16 @@ const Header = () => {
           <p>Shopcart</p>
         </Link>
         <div className="header__menu">
-          <Link href="/">
+          <Link href="/shop">
             <p>Shop</p>
           </Link>
-          <Link href="/">
+          <Link href="/deals">
             <p>Deals</p>
           </Link>
-          <Link href="/">
+          <Link href="/nA">
             <p>What's New</p>
           </Link>
-          <Link href="/">
+          <Link href="/about">
             <p>About Us</p>
           </Link>
         </div>
