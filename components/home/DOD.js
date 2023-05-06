@@ -30,6 +30,7 @@ const DOD = ({ title, wtd, products }) => {
               id={product._id}
               key={product._id}
               salePrice={product.salePrice}
+              product={product}
             />
           ))}
       </div>

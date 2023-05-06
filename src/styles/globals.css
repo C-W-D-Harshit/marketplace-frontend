@@ -148,6 +148,7 @@ body {
   font-size: 2.5rem;
   font-weight: 600;
   min-width: 40rem;
+  font-family: "poppins", sans-serif;
 }
 
 .header__menu > * {
@@ -528,7 +529,7 @@ input:focus {
   /* margin-left: 6rem; */
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: nowrap;
   overflow: hidden;
   overflow-x: auto;

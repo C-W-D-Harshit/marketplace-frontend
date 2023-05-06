@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
+import { useDispatch } from "react-redux";
 import ReactStars from "react-stars";
+import { addToCart } from "../../reducers/cartSlice";
 
 const ProductCard = ({
   name,
@@ -13,7 +15,12 @@ const ProductCard = ({
   ratings,
   numOfReviews,
   id,
+  product,
 }) => {
+  const dispatch = useDispatch();
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
   return (
     <div className="productCard">
       <div className="productCard__top">
@@ -45,7 +52,7 @@ const ProductCard = ({
           <span>({numOfReviews})</span>
         </div>
       </div>
-      <div className="productCard_cta">
+      <div className="productCard_cta" onClick={() => handleAddToCart(product)}>
         <p>Add To Cart</p>
       </div>
     </div>
