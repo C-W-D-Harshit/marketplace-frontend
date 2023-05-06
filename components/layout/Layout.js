@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <Dash />
       <Bot_Nav />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
