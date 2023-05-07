@@ -26,7 +26,7 @@ const DOD = ({ title, wtd, products }) => {
               price={product.price}
               ratings={product.ratings}
               numOfReviews={product.numOfReviews}
-              img={img}
+              img={product.images[0].url}
               id={product._id}
               key={product._id}
               salePrice={product.salePrice}

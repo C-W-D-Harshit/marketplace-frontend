@@ -43,11 +43,11 @@ const Header = () => {
           <BiSearchAlt />
         </div>
         <div className="header__user">
-          <Link href="/">
+          <Link href="/account">
             <RiAccountBoxLine />
             <p>Account</p>
           </Link>
-          <Link href="/">
+          <Link href="/cart">
             <div className="cart_">
               <BsCart4 />
               <p>{count}</p>
