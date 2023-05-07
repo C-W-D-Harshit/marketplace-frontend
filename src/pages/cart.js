@@ -13,6 +13,7 @@ import { useEffect } from "react";
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const router = useRouter();
 
   useEffect(() => {
     dispatch(getTotals());
@@ -66,7 +67,10 @@ const Cart = () => {
             {cart.cartItems &&
               cart.cartItems.map((cartItem) => (
                 <div className="cart-item" key={cartItem._id}>
-                  <div className="cart-product">
+                  <div
+                    className="cart-product"
+                    onClick={() => router.push(`/product/${cartItem._id}`)}
+                  >
                     <Image
                       height={150}
                       width={150}
