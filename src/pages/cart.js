@@ -9,6 +9,7 @@ import {
   removeFromCart,
 } from "../../reducers/cartSlice";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
