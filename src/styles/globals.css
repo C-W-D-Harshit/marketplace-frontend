@@ -300,9 +300,6 @@ input:focus {
     height: 25px;
   }
 
-  .botNav > *:hover {
-    color: var(--lr-green);
-  }
   .active {
     color: var(--lr-green);
   }
@@ -1224,4 +1221,373 @@ input:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+/* signup */
+
+.signup {
+  /* margin-left: 6%; */
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "roboto", sans-serif;
+  overflow: hidden !important;
+}
+
+.signup_ {
+  padding: 1rem;
+  background-color: var(--green);
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 28%;
+}
+
+.signup__ {
+  width: 92%;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.signup_title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--green);
+  padding-bottom: 2rem;
+}
+
+.signup_name > div > p {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.signup_name > div > input {
+  border: 2px solid var(--green);
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  width: 95%;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  color: black;
+}
+
+.signup_name {
+  width: 100%;
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.signup_name > div {
+  width: 100%;
+}
+
+.signup_email > p {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.signup_email > input {
+  border: 2px solid var(--green);
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  width: 95%;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  color: black;
+}
+
+.signup_email {
+  padding-bottom: 1rem;
+}
+
+.signup_cta {
+  width: 12rem;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  color: #ffffff;
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.ctas {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .signup_ {
+    width: 88%;
+  }
+  .signup__ {
+    width: 90%;
+  }
+}
+
+/* CSS loader */
+
+.loader {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: var(--green);
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+.cont {
+  width: 100%;
+  height: 100%;
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pro-back);
+  font-family: "poppins", sans-serif;
+}
+
+.cont_ {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  height: 100%;
+}
+
+.sidebar > :first-child {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.gg {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 2rem;
+  font-size: 2rem;
+}
+.jk {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.jk > :first-child {
+  margin-right: 1rem;
+}
+
+.jkk {
+  color: var(--lr-green);
+}
+
+.account {
+  width: 60%;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 15px;
+}
+
+.order {
+  width: 65%;
+  padding: 3rem;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order > :first-child {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: left;
+}
+
+.order > div {
+  font-size: 2rem;
+}
+
+.account > :first-child {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.account > div {
+  font-size: 2rem;
+}
+
+.acc_cta {
+  padding: 1rem 2rem;
+  background-color: var(--green);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  width: fit-content;
+  margin: 2rem 0rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.orderCard {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.orderDetail {
+  width: 100%;
+}
+
+.orderDetail > :first-child {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 2rem;
+}
+
+.pro_hold {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.orderItem {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.orderItem_img {
+  width: 12rem;
+  height: 12rem;
+  padding: 2rem;
+  background-color: var(--pro-back);
+  border-radius: 15px;
+}
+
+.orderItem_img > :first-child {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.checkout {
+  width: 100%;
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pro-back);
+  font-family: "poppins", sans-serif;
+}
+
+.ltr {
+  width: 60%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 3rem;
+}
+
+.ltr > :first-child {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.ltr_ {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.ltr_ > * {
+  padding: 1rem;
+  color: black;
+  width: 30rem;
+  margin: 1rem;
+  flex-grow: 1;
+  width: 40%;
+}
+
+.check_cta {
+  padding: 1rem 2rem;
+  color: #fff;
+  background-color: var(--green);
+  border-radius: 8px;
+  width: fit-content;
+  font-size: 2rem;
+  cursor: pointer;
 }

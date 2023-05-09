@@ -110,7 +110,9 @@ const Cart = () => {
                 <span className="amount">₹{cart.cartTotalAmount}</span>
               </div>
               <p>Taxes and shipping calculated at checkout</p>
-              <button>Check out</button>
+              <button onClick={() => router.push("/checkout")}>
+                Check out
+              </button>
               <div className="continue-shopping">
                 <Link href="/">
                   <svg

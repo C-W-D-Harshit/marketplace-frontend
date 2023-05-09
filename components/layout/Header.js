@@ -12,10 +12,18 @@ import { useRouter } from "next/router";
 import { BiSearchAlt } from "react-icons/bi";
 import { RiAccountBoxLine } from "react-icons/ri";
 import { BsCart4 } from "react-icons/bs";
+import { parseCookies } from "nookies/dist";
 
 const Header = () => {
   const router = useRouter();
   const count = useSelector((state) => state.cart.cartTotalQuantity);
+  const { token } = parseCookies();
+  let user = false;
+  if (token) {
+    user = true;
+  } else {
+    user = false;
+  }
   return (
     <>
       <Top_Header />
@@ -43,7 +51,7 @@ const Header = () => {
           <BiSearchAlt />
         </div>
         <div className="header__user">
-          <Link href="/account">
+          <Link href={user ? "/account" : "/login"}>
             <RiAccountBoxLine />
             <p>Account</p>
           </Link>

@@ -4,8 +4,21 @@ import Banner from "../../components/home/Banner";
 import Shop_By_Categories from "../../components/home/Shop_By_Categories";
 import DOD from "../../components/home/DOD";
 import baseUrl from "../../helpers/baseUrl";
+import { useRouter } from "next/router";
 
 export default function Home({ Dproducts, Nproducts }) {
+  const router = useRouter();
+  if (!Dproducts || !Nproducts) {
+    return (
+      <div className="loader">
+        <div className="lds-facebook">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
+  }
   return (
     <>
       <Head>

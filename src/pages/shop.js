@@ -6,9 +6,11 @@ import ProductCard from "../../components/product/productCard";
 import img from "../../public/product-img.png";
 import axios from "axios";
 import baseUrl from "../../helpers/baseUrl";
+import { useRouter } from "next/router";
 // import axios from "axios";
 
 const Shop = ({ products }) => {
+  const router = useRouter();
   const [rating, setRating] = React.useState(0);
   const [price, setPrice] = React.useState([0, 500]);
   const [checked, setChecked] = React.useState(false);
@@ -18,6 +20,7 @@ const Shop = ({ products }) => {
   const [keyword, setKeyword] = React.useState("");
   const [dat, setData] = React.useState([]);
   const [currentPage, setCurrentPage] = React.useState(1);
+  const [axiosLoading, setAxiosLoading] = React.useState(false);
   const handleChecked = (event) => {
     setChecked(event.target.checked);
   };
@@ -51,7 +54,9 @@ const Shop = ({ products }) => {
     }
     const { data } = await axios.get(link);
     setData(data);
-    console.log(dat);
+    if (data) {
+      setAxiosLoading(true);
+    }
   }
 
   const handleCheckboxChange = (id) => {
@@ -60,6 +65,17 @@ const Shop = ({ products }) => {
     );
     setUn(newUn);
   };
+  if (axiosLoading === false) {
+    return (
+      <div className="loader">
+        <div className="lds-facebook">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
+  }
   //   console.log(un);
   return (
     <div className="shop">
